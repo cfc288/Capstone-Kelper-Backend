@@ -42,7 +42,10 @@ app.config['SECRET_KEY'] = 'mysecret'
 
 
 app.secret_key = os.environ.get("FLASK_APP_SECRET")
-print('Flask app secret:  ', os.environ.get("FLASK_APP_SECRET"))
+#print('Flask app secret:  ', os.environ.get("FLASK_APP_SECRET"))
+app.config['SESSION_COOKIE_SAMESITE'] = "None"
+app.config['SESSION_COOKIE_SECURE'] = True
+
 
 #2 -> instantiate the loginManager to actually get a login_manager
 login_manager = LoginManager()
