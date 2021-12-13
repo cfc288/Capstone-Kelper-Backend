@@ -94,10 +94,10 @@ def unauthorized():
 
 
 # #Cors stuff / notes here
-CORS(clients, origins=['http://localhost:3000'], supports_credentials=True)
-CORS(users, origins=['http://localhost:3000'], supports_credentials=True)
-CORS(incidents, origins=['http://localhost:3000'], supports_credentials=True)
-CORS(messages, origins=['http://localhost:3000'], supports_credentials=True)
+CORS(clients, origins=['http://localhost:3000', 'https://kelper-frontend-capstone.herokuapp.com/'] , supports_credentials=True)
+CORS(users, origins=['http://localhost:3000', 'https://kelper-frontend-capstone.herokuapp.com/'], supports_credentials=True)
+CORS(incidents, origins=['http://localhost:3000', 'https://kelper-frontend-capstone.herokuapp.com/'], supports_credentials=True)
+CORS(messages, origins=['http://localhost:3000', 'https://kelper-frontend-capstone.herokuapp.com/'], supports_credentials=True)
 # CORS(redemption, origins=['http://localhost:3000'], supports_credentials=True)
 
 app.register_blueprint(clients, url_prefix='/api/v1/clients')
