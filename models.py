@@ -1,3 +1,5 @@
+import os 
+from playhouse.db_url import connect
 from peewee import *
 import datetime
 # from flask import Flask, jsonify
@@ -16,7 +18,14 @@ import datetime
 from flask_login import UserMixin
 #from peewee import _StringField
 
-DATABASE = SqliteDatabase('kelperDB.sqlite')
+if 'ON_HEROKU' in os.environ:
+    DATABASE = connect(os.environ.get('DATABASE_URL'))
+    
+else:
+    DATABASE = SqliteDatabase('kelperDB.sqlite')
+# Connect to the database URL defined in the environment, falling
+# back to a local Sqlite database if no database URL is specified.
+
 
 
 # db = SQLAlchemy(app)
