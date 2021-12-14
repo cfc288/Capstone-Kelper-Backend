@@ -2,15 +2,7 @@ import os
 from playhouse.db_url import connect
 from peewee import *
 import datetime
-# from flask import Flask, jsonify
-# from flask_admin import Admin
-# from flask_sqlalchemy import SQLAlchemy
-# from flask_admin.contrib.sqla import ModelView
-# from peewee import *
-# from peewee import _StringField
-# from flask import Flask, render_template
-# from flask_basicauth import BasicAuth
-# from app import app
+
 
 
 #login/logout
@@ -20,7 +12,7 @@ from flask_login import UserMixin
 
 if 'ON_HEROKU' in os.environ:
     DATABASE = connect(os.environ.get('DATABASE_URL'))
-    
+
 else:
     DATABASE = SqliteDatabase('kelperDB.sqlite')
 # Connect to the database URL defined in the environment, falling
