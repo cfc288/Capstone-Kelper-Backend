@@ -1,10 +1,6 @@
 # Capstone-Kelper-Backend
 Back end for capstone project for Kelper (in flask-python)
 
-# Capstone-Kelper-Frontend
-Front end for capstone project for Kelper (in React)
-
-
 Front End Deployment Link:
 https://kelper-frontend-capstone.herokuapp.com/
 
